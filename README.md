@@ -71,6 +71,7 @@ The project is structured according to CRISP-DM phases:
 
 ## 📁 Project Structure
 
+```
 traffic-volume-forecasting-project/
 │
 ├── data/
@@ -94,8 +95,7 @@ traffic-volume-forecasting-project/
 ├── app.py
 ├── requirements.txt
 └── README.md
-
----
+```
 
 ## 🤖 Models
 
