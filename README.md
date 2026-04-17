@@ -2,18 +2,24 @@
 
 ## 📌 Overview
 
-This project aims to predict traffic volume using machine learning techniques based on historical traffic and weather data.
+This project predicts traffic volume using machine learning models based on historical traffic and weather data.
 
-The project follows the **CRISP-DM methodology**, covering all stages from business understanding to deployment.
+The project follows the **CRISP-DM methodology**:
 
-Final outcome:
-A **Tuned Random Forest Regressor** model capable of accurately predicting traffic volume.
+* Business Understanding
+* Data Understanding
+* Data Preparation
+* Modeling
+* Evaluation
+* Deployment
+
+The final model is a **Tuned Random Forest Regressor**, achieving strong predictive performance.
 
 ---
 
 ## 📊 Dataset
 
-The dataset includes traffic and environmental features such as:
+The dataset includes:
 
 * Date and time
 * Weather conditions
@@ -30,42 +36,40 @@ Data is organized into:
 
 ## 🧠 Project Workflow
 
-The project is structured according to CRISP-DM phases:
+### 1. Business Understanding
 
-1. **Business Understanding**
+* Defined objectives and project scope
 
-   * Defined project objectives and problem scope
+### 2. Data Understanding
 
-2. **Data Understanding**
+* Explored dataset structure
+* Identified patterns, distributions, and missing values
 
-   * Explored dataset structure and distributions
-   * Identified missing values and patterns
+### 3. Data Preparation
 
-3. **Data Preparation**
+* Cleaned dataset
+* Handled missing values and duplicates
+* Engineered new features
 
-   * Cleaned data
-   * Handled missing values and duplicates
-   * Engineered new features
+### 4. Modeling
 
-4. **Modeling**
+* Trained multiple models:
 
-   * Trained multiple models:
+  * Linear Regression
+  * Ridge Regression
+  * Random Forest
+  * Gradient Boosting
+* Performed hyperparameter tuning
 
-     * Linear Regression
-     * Ridge Regression
-     * Random Forest
-     * Gradient Boosting
-   * Performed hyperparameter tuning
+### 5. Evaluation
 
-5. **Evaluation**
+* Compared models using MAE, RMSE, and R²
+* Selected best-performing model
 
-   * Compared models using MAE, RMSE, and R²
-   * Selected the best-performing model
+### 6. Deployment
 
-6. **Deployment**
-
-   * Built an interactive app using Streamlit
-   * Enabled real-time predictions
+* Built an interactive Streamlit app
+* Enabled real-time predictions
 
 ---
 
@@ -74,11 +78,11 @@ The project is structured according to CRISP-DM phases:
 ```bash
 traffic-volume-forecasting-project/
 │
-├── data/                 # raw and processed datasets
-│   ├── raw/              # original dataset
-│   └── processed/        # cleaned + feature engineered data
+├── data/                         # datasets
+│   ├── raw/                      # original dataset
+│   └── processed/                # cleaned + engineered data
 │
-├── notebooks/            # CRISP-DM phase notebooks
+├── notebooks/                    # CRISP-DM notebooks
 │   ├── Phase_1_Business_Understanding.ipynb
 │   ├── Phase_2_Data_Understanding.ipynb
 │   ├── Phase_3_Data_Preparation.ipynb
@@ -86,16 +90,23 @@ traffic-volume-forecasting-project/
 │   ├── Phase_5_Evaluation.ipynb
 │   └── Phase_6_Deployment.ipynb
 │
-├── src/                  # reusable pipeline scripts
-│   └── final_pipeline.py
+├── src/                          # modular pipeline scripts
+│   ├── cleaning.py               # data cleaning functions
+│   ├── feature_engineering.py    # feature creation
+│   ├── train_best_model.py       # model training
+│   ├── evaluate.py               # model evaluation
+│   ├── predict_best_model.py     # prediction logic
+│   └── final_pipeline.py         # end-to-end pipeline
 │
-├── models/               # saved trained model
+├── models/                       # saved trained model
 │   └── tuned_random_forest_model.pkl
 │
-├── app.py                # Streamlit application
-├── requirements.txt      # project dependencies
-└── README.md             # project documentation
+├── app.py                        # Streamlit application
+├── requirements.txt              # dependencies
+└── README.md                     # documentation
 ```
+
+---
 
 ## 🤖 Models
 
@@ -109,7 +120,7 @@ The following models were trained and evaluated:
 ### ✅ Final Model
 
 * **Tuned Random Forest Regressor**
-* Achieved strong predictive performance on test data
+* Best performance on test data
 
 ---
 
@@ -118,7 +129,7 @@ The following models were trained and evaluated:
 * Best Model: Tuned Random Forest
 * Test R² Score: ~0.966
 * Low prediction error (MAE & RMSE)
-* Model generalizes well to unseen data
+* Strong generalization to unseen data
 
 ---
 
@@ -150,13 +161,11 @@ streamlit run app.py
 The model is deployed using **Streamlit**, allowing users to:
 
 * Input feature values
-* Generate real-time traffic predictions
-* Visualize results interactively
+* Generate real-time predictions
+* Visualize results
 
 ---
 
 ## 👩‍💻 Author
 
 **Zeina Abouelmagd**
-
----
