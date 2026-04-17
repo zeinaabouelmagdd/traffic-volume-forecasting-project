@@ -71,14 +71,14 @@ The project is structured according to CRISP-DM phases:
 
 ## 📁 Project Structure
 
-```
+```bash
 traffic-volume-forecasting-project/
 │
-├── data/
-│   ├── raw/
-│   └── processed/
+├── data/                 # raw and processed datasets
+│   ├── raw/              # original dataset
+│   └── processed/        # cleaned + feature engineered data
 │
-├── notebooks/
+├── notebooks/            # CRISP-DM phase notebooks
 │   ├── Phase_1_Business_Understanding.ipynb
 │   ├── Phase_2_Data_Understanding.ipynb
 │   ├── Phase_3_Data_Preparation.ipynb
@@ -86,15 +86,15 @@ traffic-volume-forecasting-project/
 │   ├── Phase_5_Evaluation.ipynb
 │   └── Phase_6_Deployment.ipynb
 │
-├── src/
+├── src/                  # reusable pipeline scripts
 │   └── final_pipeline.py
 │
-├── models/
+├── models/               # saved trained model
 │   └── tuned_random_forest_model.pkl
 │
-├── app.py
-├── requirements.txt
-└── README.md
+├── app.py                # Streamlit application
+├── requirements.txt      # project dependencies
+└── README.md             # project documentation
 ```
 
 ## 🤖 Models
